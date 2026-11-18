@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>展區三 一腳一印｜兩腳詩集：一腳一印，留下綠色足跡</title>
+  <meta name="description" content="第二組線上策展：從集集綠色隧道與老鐵馬記憶出發，邀請中高齡朋友用雙腳實踐低碳生活。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="主選單">
+      <a class="logo" href="index.html"><span class="foot" aria-hidden="true"></span> 兩腳詩集</a>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="tunnel.html">展區一 綠色隧道</a></li>
+        <li><a href="bicycle.html">展區二 老鐵馬的記憶</a></li>
+        <li><a href="footprint.html" aria-current="page">展區三 一腳一印</a></li>
+        <li><a href="about.html">關於本展</a></li>
+        <li><a href="sources.html">參考資料與授權</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 負責人：易軒宏 -->
+    <section class="hero">
+      <p class="eyebrow">展區三</p>
+      <h1>一腳一印：留下綠色足跡</h1>
+      <p class="lead">看完綠色隧道和老鐵馬，現在換您了。選一個做得到的小承諾，留下屬於您的綠色腳印。</p>
+      <div class="footsteps" aria-hidden="true"><span class="foot"></span><span class="foot"></span><span class="foot"></span><span class="foot"></span><span class="foot"></span></div>
+    </section>
+
+    <section class="print-area">
+      <h2>做一張腳印承諾卡</h2>
+      <form class="panel no-print" id="foot-form">
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend><strong>第 1 步：選一個承諾</strong></legend>
+          <label class="pledge-option"><input type="radio" name="pledge" value="下次來集集，我搭火車再騎腳踏車"> 下次來集集，我搭火車再騎腳踏車</label>
+          <label class="pledge-option"><input type="radio" name="pledge" value="短程 1 公里內，我用走的"> 短程 1 公里內，我用走的</label>
+          <label class="pledge-option"><input type="radio" name="pledge" value="我自備水壺與購物袋出門"> 我自備水壺與購物袋出門</label>
+          <label class="pledge-option"><input type="radio" name="pledge" value="在綠色隧道，我不踩樹根、不亂丟垃圾"> 在綠色隧道，我不踩樹根、不亂丟垃圾</label>
+          <label class="pledge-option"><input type="radio" name="pledge" value="我把老鐵馬的故事說給孫子聽"> 我把老鐵馬的故事說給孫子聽</label>
+          <label class="pledge-option"><input type="radio" name="pledge" value="每週走路 150 分鐘，照顧自己也照顧地球"> 每週走路 150 分鐘，照顧自己也照顧地球</label>
+        </fieldset>
+        <label for="foot-name">第 2 步：您的稱呼（可不填）</label>
+        <input id="foot-name" type="text" maxlength="20" placeholder="例如：愛走路的林大哥">
+        <p><strong>第 3 步：選腳印顏色</strong></p>
+        <div class="colors" role="group" aria-label="腳印顏色">
+          <button class="color-btn" type="button" style="background:#2f5d3a" data-color="#2f5d3a" aria-label="樟樹綠" aria-pressed="true"></button>
+          <button class="color-btn" type="button" style="background:#7a5a3a" data-color="#7a5a3a" aria-label="木頭棕" aria-pressed="false"></button>
+          <button class="color-btn" type="button" style="background:#3d6f8f" data-color="#3d6f8f" aria-label="溪水藍" aria-pressed="false"></button>
+          <button class="color-btn" type="button" style="background:#9a3f26" data-color="#9a3f26" aria-label="復古紅" aria-pressed="false"></button>
+        </div>
+        <p><button class="btn" type="submit">蓋上腳印</button> <button class="btn secondary" type="button" id="print-btn" hidden>列印我的卡片</button></p>
+        <p id="foot-msg" aria-live="polite"></p>
+      </form>
+      <div id="preview" aria-live="polite"></div>
+    </section>
+
+    <section>
+      <h2>足跡牆</h2>
+      <ul class="wall" id="foot-wall" aria-label="足跡牆"></ul>
+      <p class="note">腳印只存在您自己的瀏覽器裡。想讓所有觀眾都看得到，可改用 Google 表單嵌入（見 README）。</p>
+    </section>
+
+    <section>
+      <h2>同一段路，不同的足跡</h2>
+      <div class="panel">
+        <label for="cmp-km">從集集車站出發要走的距離（公里）</label>
+        <input id="cmp-km" type="number" min="0" max="200" step="0.5" value="8" inputmode="decimal">
+        <div id="compare" aria-live="polite"></div>
+        <p class="note">係數單位：公克 CO2e／人公里。臺鐵數值來自臺鐵碳足跡標籤；機車（78）、汽車單人（150）為教學估算值。預設 8 公里為示意，<strong>【待補】請組員實測集集車站到綠色隧道西口的距離</strong>。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>低碳遊集集小提醒</h2>
+      <div class="split">
+        <ul>
+          <li>搭火車到集集車站，換騎腳踏車或步行</li>
+          <li>自備水壺、環保袋</li>
+          <li>慢慢走，跟老樟樹說聲早安</li>
+        </ul>
+      <figure>
+        <img src="images/jiji-station-front.jpg" alt="集集車站木造站房與「集集車站」站牌" loading="lazy">
+        <figcaption>集集車站：低碳旅行的起點。攝影：Takoradee，CC BY 2.5</figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="todo">
+      <h2>我們的承諾</h2>
+      <p>三位組員各寫一個自己的綠色承諾，並用一兩句話說說為什麼。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>數位人文地方策展專題實作｜第二組　易軒宏、楊哲豪、楊竣翔</p>
+    <p>本網站部分文字由 AI 協助草擬，經組員查證與改寫；詳見 <a href="sources.html">參考資料與授權</a></p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
